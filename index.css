@@ -1,1 +1,153 @@
 @charset "utf-8";
+
+/*-------------------------------------*/
+
+div#wrapper{
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+	line-height: 1.8;
+}
+
+/*-------------------------------------*/
+/* ヘッダー */
+/*-------------------------------------*/
+
+div#bgHeader{
+	background: #0f9999;
+}
+
+div#header{
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+	border-top: 1px solid #0f9999;
+}
+
+	div#header h1{
+		font-size: 20px;
+		float: left;
+		width: 300px;
+		color: #fff;
+		letter-spacing: 0.05em;
+		padding: 26px 0 0 0;
+	}
+
+/*-------------------------------------*/
+/* グローバルナビゲーション */
+/*-------------------------------------*/
+
+	div#header ol#gNavi{
+		float: right;
+		margin-bottom: 0;
+		padding-bottom: 0;
+        list-style-type: none
+	}
+	
+	ol#gNavi li{
+		display: block;
+		float: right;
+		border-left: 1px solid #666;
+	}
+	
+	ol#gNavi li.firstItem{
+		border-right: 1px solid #666;
+	}
+	ol#gNavi li img{
+		vertical-align: bottom;
+	}
+	
+	ol#gNavi li.lastItem{
+		margin-left: 0;
+	}
+	
+	div#header ol#gNavi li a{
+		font-size: 13px;
+		color: #fff;
+		text-decoration: none;
+		display: block;
+		padding: 30px 15px;
+	}
+
+	div#header ol#gNavi li a:hover{
+		background: #0a6666;
+	}
+
+/*-------------------------------------*/
+/* フッター */
+/*-------------------------------------*/
+
+div#footer{
+	background: #0f9999;
+	text-align: center;
+}
+
+	div#footer p#copyright{
+		text-align: center;
+		padding: 10px;
+		color: #fff;
+		font-family:"lucida grande", tahoma, verdana, arial, sans-serif!important;
+	}
+
+/*-------------------------------------*/
+/* スクロールバー付きテキストボックス */
+/*-------------------------------------*/
+
+div#text_box {
+	overflow: scroll;   /* スクロール表示 */
+	height: 230px;
+}
+
+
+
+/*::480px以下の画面(スマホ)で表示切替::*/
+/*変更したい箇所のみ書けばおｋ*/
+
+@media screen and (max-width:480px) {
+
+  div#wrapper{
+    clear:both;
+    margin: 0;
+    overflow:hidden;
+  }
+
+  div#header{
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	border-top: 1px solid #0f9999;
+  }
+	div#header h1{
+		font-size: 20px;
+		width: 100%;
+		color: #fff;
+		letter-spacing: 0.05em;
+		padding: 10px;
+	}
+
+  /*グローバルナビゲーション*/
+
+  	div#header ol#gNavi{
+      clear:both;
+      display: block;
+      width:100%;
+		margin: 0;
+		padding-bottom: 0;
+	}
+
+	ol#gNavi li{
+      float:none;
+		display: list-item;
+      	border-bottom: 1px solid #666;
+	}
+  	ol#gNavi li.firstItem{
+		border-top: 1px solid #666;
+	}
+	ol#gNavi li.lastItem{
+		margin-top: 0;
+	}
+    div#header ol#gNavi li a{
+      clear:both;
+  }
+
+}
