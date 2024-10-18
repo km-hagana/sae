@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+div#bgColor{
+	background: #F8F7F5;
+	border: 1px solid #dedede;
+}
+
+div#mainImgBox{
+	margin: 0 auto !important;float: center !important;
+	text-align: center;
+	width: 960px;
+	background: url(../../img/index/mainimg.png) no-repeat top right;
+	min-height:381px;
+    height: auto !important;
+	height: 381px;
+}
+
+div#mainImgBox div#mainMessageBox{
+	width: 277px;
+	min-height:381px;
+	height: auto !important;
+	height: 381px;
+	background: #fff;
+  	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+}
+
+	div#mainImgBox div#mainMessageBox strong{
+		font-weight: bold;
+		font-size: 17px;
+		display: block;
+		padding: 90px 20px 10px;
+	}
+	div#mainImgBox div#mainMessageBox span{
+		padding: 0 20px;
+		display: block;
+		line-height: 1.9;
+	}
+
+div#mainContents{
+	width: 900px;
+	padding: 60px 30px 45px;
+	margin: 0 auto;
+	text-align: left;
+	background: #fff;
+	border-top: 1px solid #dedede;
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+    float: left;
+}
+
+div#mainContents h2{
+	background: #0f9999;
+	padding: 4px 0 4px 12px;
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.08em;
+	margin-bottom: 10px;
+}
+
+div#mainContents strong{
+	display: block;
+	margin-bottom: 7px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+div#mainContents strong,
+div#mainContents span,
+div#mainContents dl{
+	margin-left: 10px;
+	display: block;
+}
+
+
+
+div#conceptBox{
+	width: 600px;
+	float: left;
+}
+
+div#topicsBox{
+	float: left;
+	margin-top: 45px;
+	width: 600px;
+}
+
+	div#topicsBox dl{
+		width: 595px;
+	}
+
+	div#topicsBox dl dt,
+	div#topicsBox dl dd{
+		padding: 10px 0;
+		border-bottom: 1px solid #ddd;
+	}
+
+	div#topicsBox dl dt{
+		float:left;
+		width:75px;
+		clear:both;
+		background: url(../img/bg_boder.gif) repeat 0 0 ;
+	}
+
+	div#topicsBox dl dd{
+		width:485px;
+		margin-left:75px;
+		padding-left: 20px;
+	}
+
+div#outlineBox{
+	width: 270px;
+	float: right;
+}
+
+div#outlineBox dl{}
+div#outlineBox dl dt{
+	font-weight: bold;
+	margin-bottom: 6px;
+	font-size: 14px;
+}
+div#outlineBox dl dd{
+	margin-bottom: 12px;
+}
+
+
+/*--------------------------------------------------*/
+/*::480px以下の画面(スマホ)で表示切替::*/
+/*変更したい箇所のみ書けばおｋ*/
+
+@media screen and (max-width:480px) {
+
+  div#bgColor{border:none;}
+
+  div#mainImgBox{
+    width:100%;
+	margin: 0;
+	background: url(../../img/index/mainimg.png) no-repeat;
+	min-height:381px;
+	height: auto !important;
+	height: 381px;
+  }
+
+div#mainImgBox div#mainMessageBox{
+  width:30%;
+	min-height:381px;
+	height: auto !important;
+	height: 381px;
+	background: #fff;
+	border-right: 1px solid #dedede;
+  }
+
+div#mainContents{
+  clear:both;
+	width: 100%;
+	margin: 0;
+    padding: 0;
+	text-align: left;
+	background: #fff;
+	border-top: 1px solid #dedede;
+  border-left:none;
+  border-right:none;
+}
+  div#mainContents h2{
+	padding: 3px 5px;
+	margin: 10px 0;
+}
+
+  div#conceptBox{
+    clear:both;
+	width: 100%;
+}
+
+
+  div#topicsBox{
+    clear:both;
+    max-width:100%; /*これ指定しないと画面外にはみ出る*/
+    width:100%;
+    margin:0;
+}
+
+
+  div#topicsBox dl{
+      display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #ddd;
+      margin:0 5px;
+  }
+
+    div#topicsBox dl dd a{
+    text-decoration: none;
+    }
+
+    div#topicsBox dl , div#topicsBox dl > dt, div#topicsBox dl > dd {
+    box-sizing: content-box;
+    }
+    div#topicsBox dl > dt , div#topicsBox dl > dd {
+        flex-wrap: wrap;
+              display: flex;
+        flex-direction: column;
+    margin: 0px;
+}
+
+	div#topicsBox dl dt{
+		width:100%;
+		background: url(../img/bg_boder.gif) repeat 0 0 ;
+      padding:5px 0;
+	}
+	div#topicsBox dl dd{
+     width:100%;
+      padding:5px 0;
+	}
+
+  div#outlineBox{
+    clear:both;
+	width: 100%;
+  }
+}
