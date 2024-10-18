@@ -133,6 +133,7 @@ div#text_box {
       width:100%;
 		margin: 0;
 		padding-bottom: 0;
+		display: flex; /*直下の要素が並列になる*/
 	}
 
 	ol#gNavi li{
